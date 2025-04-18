@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>복사됨</title>
+  <script>
+    window.onload = () => {
+      const params = new URLSearchParams(location.search);
+      const text = params.get("text") || "복사할 텍스트가 없습니다.";
+      navigator.clipboard.writeText(text).then(() => {
+        alert("✅ 복사 완료:\n" + text);
+      });
+    };
+  </script>
+</head>
+<body>
+  <h2>📋 클립보드에 복사 중입니다...</h2>
+</body>
+</html>
